@@ -1,25 +1,20 @@
 {
-  "name": "@vue-storefront/commercetools",
+  "name": "@vue-storefront/checkout-com",
   "version": "0.0.3",
   "sideEffects": false,
+  "private": true,
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rimraf lib && rollup -c",
+    "build": "rimraf lib && rollup -c && cd nuxt && yarn build",
     "dev": "rollup -c -w",
     "test": "jest"
   },
   "dependencies": {
-    "@vue-storefront/commercetools-api": "^0.0.3",
-    "@vue-storefront/core": "^2.0.0",
     "@vue/composition-api": "^0.3.4",
-    "js-cookie": "^2.2.1",
+    "axios": "^0.19.2",
     "vue": "^2.6.x"
-  },
-  "devDependencies": {
-    "@vue/test-utils": "^1.0.0-beta.30",
-    "vue-template-compiler": "^2.6.x"
   },
   "files": [
     "lib/**/*"
